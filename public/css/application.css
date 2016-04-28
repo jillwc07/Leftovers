@@ -11,22 +11,4 @@ ul li{
   font-style: Lobster;
 }
 
-.create_form{
-    width: 300px;
-    padding: 25px;
-    border: 5px solid navy;
-    margin: 25px;
-}
-
-#restaurant_form {
-    width: 300px;
-    padding: 25px;
-    border: 5px solid navy;
-    margin: 25px;
-}
-
-#island_fusion{
-  font-size: 30px;
-  text-align: center;
-
-}
+.
