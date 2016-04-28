@@ -20,16 +20,19 @@
   <title></title>
 </head>
 <body>
-<div id="content">
-  <header>
-    <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
-    <div id="login-toolbar">
-      <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% else %>
-        <a href="/login">Login</a>
-      <% end %>
-  </header>
+  <nav class="home_page">
+    <ul>
+      <% if logged_in? %>
+      <li>Welcome, <%= current_user.username%>. Thanks for logging in.</li>
+      <li><a href="/logout">Logout</a></li>
+      <li><a href="/restaurants/new">Add a Restaurant</a></li>
+      <%else%>
+      <li><a href="/login">Login</a></li>
+      <%end%>
+      <li><a href="/users/new">Register</a></li>
+      <li><a href="/">Home</a></li>
+    </ul>
+  </nav>
   <%= yield %>
 </div>
 </body>
