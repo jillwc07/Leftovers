@@ -1,0 +1,11 @@
+<%if @recipes.nil?%>
+ <p>Search for a recipe</p>
+<%else%>
+  <% @recipes.each do |recipe| %>
+  <%=recipe.title%>
+  <%end%>
+<%end%>
+<p>Powered By Food2Fork.com</p>
+
+
+

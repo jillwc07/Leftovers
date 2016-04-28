@@ -1,0 +1,15 @@
+<%if @user.errors.any?%>
+<ul>
+  <%@user.errors.full_messages.each do |message|%>
+  <li><%=message%></li>
+  <%end%>
+</ul>
+<% end%>
+<div class="create_form">
+<h1> Join Today!</h1>
+<form action="/users" method="POST">
+  <p>Username:<input type="text" name="user[username]" value<%=@user.username%></p>
+  <p>Email:<input type="text" name="user[email]" value<%=@user.email%>></p>
+  <p>Password:<input type="text" name="user[password]"></p>
+  <input type="submit" <value="Sign up">
+</form>
